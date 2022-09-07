@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Automatas AFD</title>
+    <link rel="stylesheet" href="{% static 'css/nicepage.css'%}" media="screen">
+<link rel="stylesheet" href="{% static 'css/Acerca-de.css'%}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'javascript/jquery.js'%}" "="" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'javascript/nicepage.js'%}" "="" defer=""></script>
+    <meta name="generator" content="Nicepage 4.17.10, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+   <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Acerca de">
+    <meta property="og:type" content="website">
+  </head>
+  <body data-home-page="Acerca-de.html" data-home-page-title="Acerca de" class="u-body u-xl-mode" data-lang="es"><header class="u-clearfix u-header u-header" id="sec-681a"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-nav-container"></div>
+          <div class="u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Acerca-de.html">Acerca de</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contacto.html">Contacto</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Página-1.html">Página 1</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-f4e1">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-vertical u-line-1"></div>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-vertical u-line-2"></div>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-3"></div>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-4"></div>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-vertical u-line-5"></div>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-vertical u-line-6"></div>
+        <p class="u-text u-text-default u-text-1">1 </p>
+        <div class="u-form u-form-1">
+        <form role="form" action="/afd/grafico/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+              <input type="hidden" value="0" name="posicion_palabra">
+              <input type="hidden" value="1" name="posicion_circulo">
+              <input type="hidden" value="1" name="inicio">
+              <div class="u-form-group u-form-name">
+              <label for="name-9741" class="u-label">Palabra</label>
+              <input type="number" placeholder="Ejemplo: 101110" id="name-9741" name="palabra" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+              <button type="submit" class="u-btn u-btn-submit u-button-style">Analizar<br>
+              </button>
+            </div>
+          </form>
+
+        </div>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-7"></div>
+        <div class="u-rotation-parent u-rotation-parent-1">
+          <div class="u-rotate-90 u-shape u-shape-svg u-text-black u-shape-1">
+            <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 140 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9f33"></use></svg>
+            <svg class="u-svg-content" viewBox="0 0 140 160" x="0px" y="0px" id="svg-9f33"><g><polygon points="0,0 140,80 0,160 	"></polygon>
+</g></svg>
+          </div>
+        </div>
+        <div class="u-border-2 u-border-grey-dark-1 u-preserve-proportions u-shape u-shape-circle u-shape-2"></div>
+        <p class="u-text u-text-default u-text-2">1</p>
+        <div class="u-border-2 u-border-grey-dark-1 u-preserve-proportions u-shape u-shape-circle u-shape-3"></div>
+        <p class="u-text u-text-default u-text-3">4</p>
+        <div class="u-border-2 u-border-grey-dark-1 u-preserve-proportions u-shape u-shape-circle u-shape-4"></div>
+        <div class="u-shape u-shape-svg u-text-black u-shape-5">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 140 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-60b8"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 140 160" x="0px" y="0px" id="svg-60b8"><g><polygon points="0,0 140,80 0,160 	"></polygon>
+</g></svg>
+        </div>
+        <div class="u-border-2 u-border-grey-dark-1 u-preserve-proportions u-shape u-shape-circle u-shape-6"></div>
+        <p class="u-text u-text-default u-text-4">2</p>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-8"></div>
+        <div class="u-shape u-shape-svg u-text-black u-shape-7">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 140 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b0ad"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 140 160" x="0px" y="0px" id="svg-b0ad"><g><polygon points="0,0 140,80 0,160 	"></polygon>
+</g></svg>
+        </div>
+        <p class="u-text u-text-default u-text-5">0</p>
+        <p class="u-text u-text-default u-text-6">1 </p>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-9"></div>
+        <div class="u-shape u-shape-svg u-text-black u-shape-8">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 140 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-c59d"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 140 160" x="0px" y="0px" id="svg-c59d"><g><polygon points="0,0 140,80 0,160 	"></polygon>
+</g></svg>
+        </div>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-10"></div>
+        <div class="u-shape u-shape-svg u-text-black u-shape-9">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 140 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f9c8"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 140 160" x="0px" y="0px" id="svg-f9c8"><g><polygon points="0,0 140,80 0,160 	"></polygon>
+</g></svg>
+        </div>
+        <div class="u-rotation-parent u-rotation-parent-2">
+          <div class="u-rotate-270 u-shape u-shape-svg u-text-black u-shape-10">
+            <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 140 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b0cc"></use></svg>
+            <svg class="u-svg-content" viewBox="0 0 140 160" x="0px" y="0px" id="svg-b0cc"><g><polygon points="0,0 140,80 0,160 	"></polygon>
+</g></svg>
+          </div>
+        </div>
+        <p class="u-text u-text-default u-text-7">0</p>
+        <p class="u-text u-text-default u-text-8">1 </p>
+        <div class="u-border-2 u-border-grey-dark-1 u-preserve-proportions u-shape u-shape-circle u-shape-11"></div>
+        <p class="u-text u-text-default u-text-9">3</p>
+        <div class="u-shape u-shape-svg u-text-black u-shape-12">
+          <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 140 160" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ca97"></use></svg>
+          <svg class="u-svg-content" viewBox="0 0 140 160" x="0px" y="0px" id="svg-ca97"><g><polygon points="0,0 140,80 0,160 	"></polygon>
+</g></svg>
+        </div>
+        <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-11"></div>
+        <p class="u-text u-text-default u-text-10">0</p>
+
+        <a href="https://nicepage.com/c/video-website-templates" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-2 u-palette-1-base u-radius-2 u-btn-2">Siguiente&nbsp;<span class="u-icon u-text-white"><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-.006,0.011-.013,0.018-.019C513.968,262.339,513.943,249.635,506.134,241.843z"></path></svg><img></span>
+        </a>
+
+      </div>
+    </section>
+    
+    
+
+  
+</body></html>
