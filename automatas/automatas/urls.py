@@ -23,6 +23,9 @@ urlpatterns = [
 
 urlpatterns.extend(
     [
+        url(r'^automatas_finitos/$', afd_views.automatas),
         url(r'^afd/grafico/$', afd_views.grafico),
+        url(r'^afnd/grafico_afnd/$', afd_views.grafico_afnd),
+        url(r'^afnd/grafico_afndlamda/$', afd_views.grafico_afndlamda),
     ]
 )
